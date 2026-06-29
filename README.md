@@ -4,6 +4,10 @@ A local LLM chat interface powered by [Ollama](https://ollama.ai) — FastAPI ba
 
 The stack is deliberately lean and inheritable: FastAPI, SQLite, vanilla React, no exotic dependencies. The two heavyweight ML runtimes (TTS/STT) are an opt-in extra, not a baseline requirement — delete `tts.py`/`stt.py` and their routes and nChat is exactly what it was without them.
 
+![nChat streaming a syntax-highlighted code response with the Think and Search toggles enabled](screenshots/chat_with_code.png)
+
+*Streaming chat with syntax-highlighted code, reasoning, and web search — all running locally.*
+
 ---
 
 ## Features
@@ -24,13 +28,25 @@ The stack is deliberately lean and inheritable: FastAPI, SQLite, vanilla React, 
 - Sources render under the answer and persist with the conversation
 - Per-turn only: results ground the current answer but aren't re-injected on later turns, so stale snippets don't masquerade as fresh grounding
 
+![nChat answering a query with a numbered Sources list returned from a web search](screenshots/search.png)
+
+*Search grounding: live results are retrieved and rendered as numbered, citeable sources under the answer.*
+
 **Voice loop** (optional — see [README_Voice.md](README_Voice.md) and [README_Voice_Loop_Design.md](README_Voice_Loop_Design.md))
 - **Read aloud** with Kokoro TTS (11 voices), streamed per-sentence so playback starts on sentence one while the rest synthesizes
 - **Dictation** with faster-whisper STT, including networking-aware refinement (a vocab pack plus an optional LLM correction pass) — transcribed text lands in the input for review and never auto-sends
 - Fully local: no cloud, no API keys. On Apple Silicon the LLM runs on Metal and the voice models on CPU, so they overlap rather than contend
 
+![nChat with the voice selector open, showing Kokoro voices, while displaying a response to read aloud](screenshots/chat_voice.png)
+
+*The voice loop: pick a Kokoro voice from the top bar and read any response aloud, or dictate prompts with the mic — entirely on local hardware.*
+
 **System prompts**
 - Set a per-conversation system prompt / persona, and save reusable **presets**
+
+![nChat system prompt modal with saved presets such as Concise Assistant, Config Reviewer, and Network Engineer](screenshots/system_prompt.png)
+
+*Per-conversation personas, with named presets you can save and reuse.*
 
 **File attachments**
 - Attach text files to a turn; contents are injected into context and counted by the context budgeter
