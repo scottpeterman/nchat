@@ -1,0 +1,28 @@
+# nChat voice loop — optional dependencies (TTS + STT).
+#
+# These are the ONE honest exception to nChat's lean, inheritable stack: two
+# heavyweight ML runtimes (torch via Kokoro, CTranslate2 via faster-whisper).
+# They are deliberately NOT in requirements.txt — install them only if you want
+# the voice loop. Delete tts.py / stt.py and their routes and nChat is exactly
+# what it is without these.
+#
+#   pip install -r requirements-voice.txt
+#
+# On Apple Silicon both ship native arm64 wheels (torch with an unused-by-default
+# MPS backend, CTranslate2 with CPU support), so this is a clean `pip install`
+# with no source builds. The voice models run on CPU; the LLM runs on Metal.
+
+kokoro>=0.9.2            # TTS engine (Apache-2.0); pulls torch + misaki G2P
+faster-whisper>=1.1.0    # STT engine (MIT); pulls CTranslate2
+soundfile>=0.12.1        # WAV/audio I/O helper used alongside the engines
+
+# Notes:
+# - Kokoro will fetch its 82M weights on first use; faster-whisper fetches the
+#   'small' weights on first use. Both cache locally thereafter. Run with
+#   NCHAT_VOICE_WARM=1 to pre-load at startup instead of on first action.
+# - espeak-ng is an optional Kokoro fallback for out-of-dictionary words. It's a
+#   separate system binary (GPLv3, invoked as its own process — no license bleed)
+#   and is NOT required for normal use. Install via your OS package manager only
+#   if Kokoro warns about missing G2P fallback:
+#       macOS:  brew install espeak-ng
+#       Debian: apt-get install espeak-ng

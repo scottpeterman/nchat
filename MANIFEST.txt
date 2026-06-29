@@ -1,0 +1,39 @@
+# snapshot manifest
+# project : nchat
+# root    : /Users/speterman/PycharmProjects/nchat
+# created : 2026-06-29 04:12:15 -0600  on speterman-MacBook-Pro
+# git     : (not a git repo)
+# files   : 31
+#
+# sha256                                                            bytes  path
+896121582fdd59afadddd549a9055dbd4f2e21eb11497230d38c52f9ff27ecea       3267  README.md
+81af9fb30ece6bff5e8f2535adc90a099c431ec11f653b268c09f0098271cbb3       8999  README_Voice.md
+0a034dfc3cb8b442b226053251fe41b2e8cc4b6ce801498a4d6ce73a39cbe8c3      30487  README_Voice_Loop_Design.md
+328f20bdb6fac84c0df9835908684cdc0ef66e3749bef86c34860a970bd51b11       2883  backend/README.md
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855          0  backend/__init__.py
+651fe9733aaf507ae8e3b6c4db2ce1425370800eaab3f75bd81a23869c07604e      12262  backend/database.py
+9ad53fe38bd6ebc31769f6be4df4fbae4a54e6a79df05aed9b6d1a572b7716ec      27960  backend/main.py
+0ed3f417ff6a94f893c61868d6d35cd5efb36c72983e54e2836be28acad81cde      10585  backend/search.py
+693e8cf09137df3752ee704734065140783601f5036e32b1d0894967f63f6c99      15271  backend/stt.py
+c2df3a460de330f3f2b8302d6dd80af20ff5fc8e99df9d156af7437d3809433b       1777  backend/try_ddg.py
+49e8d3d5720bbb37fda6c487d4cb2dbf89214c319e291570d3093be5d442597f      17248  backend/tts.py
+2239105311d7ba5e6dc37e43de0885971b3d7068f3b696d0806d5bca60e4da37       6131  backend/voice_selftest.py
+4b8cc54e79ff8939d594984dedc65a89c3028e0c21060a653a68f433cb58b0f8        626  frontend/index.html
+76f7c43518bec03b78fb6814bd98c65a242d5238004869589738826ad83f6306     118008  frontend/package-lock.json
+976d3adf23195bbe6ce43afff2e9541f267f0f02bd02f501a4d7fda2966c0ec7        525  frontend/package.json
+8377ab61f39bce86bb59b86a3d162ab18b12249ba31018a9a8634c96d9033d70      14602  frontend/src/App.jsx
+1fb119122c0ad1886ff6c418b04751b89a8474ec6c1b4feb8477bb7002bd2574       7703  frontend/src/components/ChatView.jsx
+7daddb1656fa05aa3afcd90529339bc3ca7c71e723df6249365c8ddead66b313       9807  frontend/src/components/MessageBubble.jsx
+a2f8bc605e80e4dffb04f49439af8e57a254682fcf41937ca036cd5a98ec25a7        883  frontend/src/components/ModelSelector.jsx
+47a7735721bc59f9342c31824a3104796f2306a57d94288b5d26ee0079401fb6       2349  frontend/src/components/Sidebar.jsx
+250aa83ea2da846eac91589abe51856f6004b6d7a48d1a23e4a6544341ec68ae       3170  frontend/src/components/SystemPromptModal.jsx
+a874100b226ac008c4be45d6aae9405a7a6685056135286445f4c76b9e792f6f        235  frontend/src/main.jsx
+c2ec66051d9259bd2713dccb3567b810fd339905d4d8dbc9bf1533f19d26c573      25393  frontend/src/styles/app.css
+dfd90289a7326d6e83f4882c09ca6f7b7a43538e172c45764fb098b5dc60b25e      10364  frontend/src/voice.js
+c357d5283de3862f8ba4683eaec046689593bff000df27a71974e9351c17f86e        339  frontend/vite.config.js
+6858dcd0eea1a6699e2089a6dc727052116bdfe36b3f22a57e6a767173dbac08        731  poem.md
+88143c5ade6b08aa3cecf22bf8e8d184bebd12a5ab0585356fc90a61679d9815         80  requirements.txt
+3a741b3621ae6997ddada6ee87905b046142fb6601a6798a081a46866d968bfc       1515  requirements_voice.txt
+d522f6270b425560a17217fdeb81150afaae64aaa7515ebde0f6900f83de0800       1356  run.sh
+2ba4dd92b9c52ab828041103ea1bafb8e56373d604f12f32d839fa7a2f74786d        120  run_simple.sh
+6857e79fe4b3a9bed6272e2f124f17aaf3a4d724a536c661fd8542c99f0d88a6       7302  snapshot.sh

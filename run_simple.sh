@@ -1,0 +1,1 @@
+NCHAT_VOICE_WARM=1 NCHAT_WHISPER_SIZE=base.en NCHAT_WHISPER_BEAM=1   uvicorn backend.main:app --host 0.0.0.0 --port 8400
